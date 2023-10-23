@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: .
+    image: samgpt:latest
+    container_name: samgpt
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
